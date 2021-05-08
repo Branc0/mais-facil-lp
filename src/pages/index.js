@@ -7,7 +7,7 @@ import HeaderSection from "./index/header-section"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Mais Fácil - Home" />
+    <Seo title="Home" />
     <HeaderSection></HeaderSection>
   </Layout>
 )
