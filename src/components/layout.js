@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./layout/header"
+import styled from "styled-components"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,10 +23,14 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const Main = styled.main`
+    background-color: #FAFAF4
+    `
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main id="inicio">{children}</main>
+      <Main id="inicio">{children}</Main>
       <footer>
         © {new Date().getFullYear()}, Built with
           {` `}

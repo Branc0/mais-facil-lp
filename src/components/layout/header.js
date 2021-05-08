@@ -9,6 +9,7 @@ const HeaderElement = styled.header`
   background-color: #206A5D;
   width:100%;
   position: fixed;
+  z-index: 1;
 `;
 
 const CustomH1 = styled.h1`
