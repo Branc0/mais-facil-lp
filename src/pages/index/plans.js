@@ -25,7 +25,9 @@ const TextContainer = styled.div`
 
 const CardPlano = styled.article`
     border-radius: 8px;
-
+    @media (max-width: 768px) {
+        margin-bottom: 24px;
+    }
 `
 
 const CardBody = styled.div`
