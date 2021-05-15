@@ -8,7 +8,7 @@ import styled from "styled-components"
 const Section = styled.section`
     min-height: 36.8rem;
     background: rgb(135,163,72);
-    background: linear-gradient(90deg, rgba(135,163,72,1) 0%, rgba(134,173,51,1) 100%); 
+    background: linear-gradient(90deg, rgba(135,163,72,1) 0%, rgba(134,173,51,1) 100%);
     padding-top: 14rem;
     border-radius: 0 0 280px 0;
     position: relative;
@@ -33,11 +33,14 @@ const CustomP = styled.p`
 
 const ImgContainer = styled.div`
     position: absolute;
-    right: 0; 
-    bottom: 0; 
+    right: 0;
+    bottom: 0;
     width: 420px;
     height: auto;
     transform: translate(-50%, 6px);
+    @media (max-width: 1024px) {
+        right: -80px;
+    }
 `
 
 const HeaderSection = () => {
