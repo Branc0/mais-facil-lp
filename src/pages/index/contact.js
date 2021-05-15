@@ -152,7 +152,7 @@ class Contact extends Component {
         this.setState({ loadingSubmit: true })
 
         fetch(
-            "http://192.168.15.10:8080/contact",
+            "http://maisfacilcontabil.com.br/contact",
             {
                 method: "POST",
                 headers: {
