@@ -12,6 +12,12 @@ const Section = styled.section`
     padding-top: 14rem;
     border-radius: 0 0 280px 0;
     position: relative;
+    @media (max-width: 768px) {
+        padding-top: 9rem;
+        padding-bottom: 4rem;
+        min-height: 0;
+        border-radius: 0;
+    }
 `
 
 const CustomH2 = styled.h2`
@@ -21,6 +27,11 @@ const CustomH2 = styled.h2`
     font-size: 42px;
     line-height: 42px;
     margin-bottom: 24px;
+    letter-spacing: 1.25px;
+    @media (max-width: 768px) {
+        font-size: 32px;
+        line-height: 32px;
+    }
 `
 
 const CustomP = styled.p`
@@ -29,6 +40,10 @@ const CustomP = styled.p`
     color: #ffffffde;
     font-size: 18px;
     line-height: 24px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+        font-weight: 400;
+    }
 `
 
 const ImgContainer = styled.div`
@@ -40,6 +55,10 @@ const ImgContainer = styled.div`
     transform: translate(-50%, 6px);
     @media (max-width: 1024px) {
         right: -80px;
+    }
+    @media (max-width: 768px) {
+        width: 320px;
+        right: -120px;
     }
 `
 
