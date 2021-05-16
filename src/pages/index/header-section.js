@@ -12,11 +12,14 @@ const Section = styled.section`
     padding-top: 14rem;
     border-radius: 0 0 280px 0;
     position: relative;
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
         padding-top: 9rem;
         padding-bottom: 4rem;
         min-height: 0;
         border-radius: 0;
+    }
+    @media (max-width: 425px) {
+        padding-bottom: 0rem;
     }
 `
 
@@ -28,9 +31,12 @@ const CustomH2 = styled.h2`
     line-height: 42px;
     margin-bottom: 24px;
     letter-spacing: 1.25px;
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
         font-size: 32px;
         line-height: 32px;
+    }
+    @media (max-width: 425px) {
+        margin-bottom: 18px;
     }
 `
 
@@ -40,9 +46,12 @@ const CustomP = styled.p`
     color: #ffffffde;
     font-size: 18px;
     line-height: 24px;
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
         font-size: 16px;
         font-weight: 400;
+    }
+    @media (max-width: 425px) {
+        font-weight: 300;
     }
 `
 
@@ -56,18 +65,26 @@ const ImgContainer = styled.div`
     @media (max-width: 1024px) {
         right: -80px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
         width: 320px;
         right: -120px;
+    }
+    @media (max-width: 425px) {
+        width: 280px;
+        right: 0;
+        margin: 0 auto;
+        margin-bottom: -6px;
+        transform: unset;
+        position: unset;
     }
 `
 
 const HeaderSection = () => {
     return (
-        <Section>
+        <Section id="home">
             <Container>
                 <Row>
-                    <Col xs='6'>
+                    <Col xs='12' md='6'>
                         {/* <CustomTextContainer> */}
                         <CustomH2>Contabilidade digital <br />perfeita para o seu negócio</CustomH2>
                         <CustomP>

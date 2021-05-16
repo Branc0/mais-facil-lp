@@ -7,6 +7,9 @@ import styled from "styled-components"
 const Section = styled.section`
     padding: 100px 0;
     min-height: 600px;
+    @media (max-width: 425px) {
+        padding: 80px 0;
+    }
 `
 
 const CustomH2 = styled.h2`
@@ -24,6 +27,9 @@ const FormContainer = styled.div`
     padding: 24px;
     max-width: 500px;
     margin: 0 auto;
+    @media (max-width: 425px) {
+        margin-top: 80px;
+    }
     `
 
 const CustomP = styled.p`
@@ -190,10 +196,10 @@ class Contact extends Component {
 
     render() {
         return (
-            <Section>
+            <Section id="contato">
                 <Container>
                     <Row>
-                        <Col>
+                        <Col xs="12" md="6">
                             <TextContainer>
 
                                 <CustomH2>Vamos conversar?</CustomH2>
@@ -207,7 +213,7 @@ class Contact extends Component {
                                 <CustomH4>Fique Tranquilo que o nosso contato é sem compromisso!</CustomH4>
                             </TextContainer>
                         </Col>
-                        <Col>
+                        <Col xs="12" md="6">
                             <FormContainer>
                                 <form onSubmit={this.handleSubmit}>
                                     <CustomSelect
@@ -219,7 +225,7 @@ class Contact extends Component {
                                         onChange={this.handleInputChange}
                                         required
                                     >
-                                        <option disabled selected>Escolha um plano</option>
+                                        <option disabled defaultValue>Escolha um plano</option>
                                         <option value="basico">Básico</option>
                                         <option value="premium">Premium</option>
                                     </CustomSelect>

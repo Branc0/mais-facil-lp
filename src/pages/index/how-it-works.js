@@ -8,8 +8,10 @@ import AccountSvg from "../../images/account-created.svg"
 import SuportSvg from "../../images/suport.svg"
 
 const Section = styled.section`
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
+    @media (max-width: 425px) {
+        padding: 80px 0;
+    }
 `
 
 const CustomH2 = styled.h2`
@@ -19,6 +21,11 @@ const CustomH2 = styled.h2`
     font-size: 42px;
     line-height: 42px;
     margin-bottom: 82px;
+    @media (max-width: 425px) {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 24px;
+    }
     `
 
 const CustomH3 = styled.h3`
@@ -28,7 +35,12 @@ const CustomH3 = styled.h3`
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 8px;
-    `
+    @media (max-width: 425px) {
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+    }
+`
 
 const CustomP = styled.p`
     font-family: roboto;
@@ -36,19 +48,30 @@ const CustomP = styled.p`
     color: #707070;
     font-size: 16px;
     line-height: 24px;
-    `
+    @media (max-width: 425px) {
+        font-size: 14px;
+        margin-bottom: 24px
+     }
+`
 
 const TextContainer = styled.div`
     max-width: 500px;
-    `
+`
 
 const SvgContainer = styled.div`
     margin-bottom: 24px;
     text-align:center;
     max-width: 350px;
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
         max-width: 250px;
     }
+    @media (max-width: 425px) {
+        max-width: 200px;
+        max-height: 220px;
+        &:nth-child(2n) {
+            margin-bottom: 300px;
+        }
+     }
 `
 
 
@@ -77,7 +100,7 @@ class HowItWorks extends Component {
 
     render() {
         return (
-            <Section>
+            <Section id="como-funciona">
                 <Container>
                     <CustomH2>Como Funciona</CustomH2>
                     <CustomRow>
@@ -93,18 +116,18 @@ class HowItWorks extends Component {
                                 <CustomP>Escolha um de nossos <strong>planos</strong>, que esteja de acordo com as necessidades da sua empresa.</CustomP>
                             </TextContainer>
                         </Col>
-                        <Col xs='12' lg='6' style={{ marginTop: this.state.windowWidth > 768 ? '84px' : '0' }}>
+                        <Col xs='12' lg='6' style={{ marginTop: this.state.windowWidth > 990 ? '84px' : '0' }}>
                             <SvgContainer className="mx-auto">
                                 <RegisterSvg width='100%' />
                             </SvgContainer>
-                            <TextContainer className="mx-auto">
+                            <TextContainer className="mx-auto mt-5 pt-2 mt-md-0 pt-md-0">
                                 <CustomH3>Cadastre-se</CustomH3>
                                 <CustomP>Preencha o <strong>formulário</strong>, e entraremos em contato para entender quais são as suas necessidades contábeis, explicar nossa proposta e requisitarmos os documentos que precisamos para cadastra-lo.</CustomP>
                             </TextContainer>
                         </Col>
                     </CustomRow>
                     <CustomRow>
-                        <Col xs='12' lg='6' style={{ marginTop: this.state.windowWidth > 768 ? '-48px' : '0' }}>
+                        <Col xs='12' lg='6' style={{ marginTop: this.state.windowWidth > 990 ? '-48px' : '0' }}>
                             <SvgContainer className="mx-auto">
                                 <AccountSvg width='100%' />
                             </SvgContainer>
@@ -113,7 +136,7 @@ class HowItWorks extends Component {
                                 <CustomP>Depois de toda a documentação organizada, assumimos a contabilidade da sua empresa, nossa equipe irá mostrar nosso sistema e iremos acompanhar todas as obrigações fiscais, mês a mês. O prazo para a análise de documentos é de 12 horas.</CustomP>
                             </TextContainer>
                         </Col>
-                        <Col xs='12' lg='6' style={{ marginTop: this.state.windowWidth > 768 ? '124px' : '0' }}>
+                        <Col xs='12' lg='6' style={{ marginTop: this.state.windowWidth > 990 ? '124px' : '0' }}>
                             <SvgContainer className="mx-auto">
                                 <SuportSvg
                                     width='100%'

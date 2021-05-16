@@ -1,7 +1,8 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import React, { Component } from "react"
 import styled from "styled-components";
 import { Navbar, Nav } from "react-bootstrap"
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 
 import LogoSvg from "../../images/white-logo.svg"
 
@@ -38,38 +39,47 @@ const CustomA = styled.a`
   color: #206A5D;
     cursor: pointer;
   }
+  @media (max-width: 990px) {
+      text-align: center;
+      width: 150px;
+      margin-left: auto;
+  }
 `
 
-const Header = ({ siteTitle }) => (
-  <HeaderElement>
-    <div className='container'>
-      <Navbar variant='dark' expand="lg">
-        <Navbar.Brand className='mr-auto'>
-          <CustomH1>
-            <LogoSvg />
-          </CustomH1>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className='justify-content-end align-items-center' id="basic-navbar-nav">
-          <Nav className='text-end'>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Como Funciona</Nav.Link>
-            <Nav.Link href="#link">Planos</Nav.Link>
-            <Nav.Link href="#link">Contato</Nav.Link>
-            <CustomA>Entrar</CustomA>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
-  </HeaderElement>
-)
+class Header extends Component {
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  handleClick = destination => {
+    scrollTo(destination);
+    if (window.innerWidth < 990)
+      document.querySelector('#navbar-toggle').click();
+  }
+
+  render() {
+    return (
+      <HeaderElement>
+        <div className='container'>
+          <Navbar variant='dark' expand="lg">
+            <Navbar.Brand className='mr-auto'>
+              <CustomH1>
+                <LogoSvg />
+              </CustomH1>
+            </Navbar.Brand>
+            <Navbar.Toggle id="navbar-toggle" aria-controls="navbar-collapse" />
+            <Navbar.Collapse className='justify-content-end align-items-center' id="navbar-collapse">
+              <Nav className='text-end'>
+                <Nav.Link onClick={() => this.handleClick('#home')}>Home</Nav.Link>
+                <Nav.Link onClick={() => this.handleClick("#como-funciona")}>Como Funciona</Nav.Link>
+                <Nav.Link onClick={() => this.handleClick("#planos")}>Planos</Nav.Link>
+                <Nav.Link onClick={() => this.handleClick("#contato")}>Contato</Nav.Link>
+                <CustomA href="https://maisfacilcontabil.com.br/">Entrar</CustomA>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+      </HeaderElement >
+    )
+  }
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

@@ -16,6 +16,9 @@ const CustomH2 = styled.h2`
     font-size: 42px;
     line-height: 42px;
     margin-bottom: 88px;
+    @media (max-width: 425px) {
+        margin-bottom: 42px;
+    }
     `
 
 const TextContainer = styled.div`
@@ -25,7 +28,7 @@ const TextContainer = styled.div`
 
 const CardPlano = styled.article`
     border-radius: 8px;
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
         margin-bottom: 24px;
     }
 `
@@ -90,10 +93,14 @@ const CustomUl = styled.ul`
             transform: translate(-50%, -50%);
         }
     }
+    @media (max-width: 425px) {
+        margin-left: 38px;
+    }
+
 `
 
 const Plans = () => (
-    <Section>
+    <Section id="planos">
         <Container>
             <CustomH2 className="text-center">Planos</CustomH2>
             <Row>
