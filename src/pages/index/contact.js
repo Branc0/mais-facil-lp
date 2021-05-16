@@ -118,12 +118,16 @@ const CustomH4 = styled.h4`
 class Contact extends Component {
 
     constructor() {
-        super()
+        super();
 
         this.initialFormState = {
-            nome: "",
+            plano: "basico",
+            ramo: "",
+            state: "",
+            city: "",
             email: "",
-            mensagem: "",
+            name: "",
+            phone: "",
             loadingSubmit: false,
         }
 
@@ -158,7 +162,7 @@ class Contact extends Component {
         this.setState({ loadingSubmit: true })
 
         fetch(
-            "http://maisfacilcontabil.com.br/contact",
+            "https://api.maisfacilcontabil.com.br/contact",
             {
                 method: "POST",
                 headers: {
@@ -171,7 +175,7 @@ class Contact extends Component {
                     state: `${this.state.state}`,
                     city: `${this.state.city}`,
                     email: `${this.state.email}`,
-                    name: `${this.state.name} `,
+                    name: `${this.state.name}`,
                     phone: `${this.state.phone}`,
                 }),
             }
@@ -188,7 +192,9 @@ class Contact extends Component {
             .catch(data => {
                 console.log(data)
                 window.location = encodeURI(
-                    `https://api.whatsapp.com/send?phone=5517991663337&text=Olá, me chamo ${this.state.nome} <${this.state.email}>. ${this.state.mensagem}`
+                    `https://api.whatsapp.com/send?phone=5517991663337&text=Olá, me chamo ${this.state.name} <${this.state.email}>. 
+                            Tenho uma empresa no ramo ${this.state.ramo} e tenho interesse no plano ${this.state.plano}.
+                            Sou de ${this.state.city}, ${this.state.state}. Para entrar em contato comigo ${this.state.phone}.`
                 )
             })
             .finally(() => this.setState({ ...this.initialFormState }))

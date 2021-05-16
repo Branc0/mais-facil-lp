@@ -85,13 +85,11 @@ const HeaderSection = () => {
             <Container>
                 <Row>
                     <Col xs='12' md='6'>
-                        {/* <CustomTextContainer> */}
                         <CustomH2>Contabilidade digital <br />perfeita para o seu negócio</CustomH2>
                         <CustomP>
                             Somos uma contabilidade completa com atendimento reconhecidamente excelente.
                             Podemos abrir empresa grátis, transformar seu MEI em ME e migrar de outras contabilidades.
                         </CustomP>
-                        {/* </CustomTextContainer> */}
                     </Col>
                     <ImgContainer>
                         <StaticImage src="../../images/header.png" placeholder="blurred" alt="Homem sorrindo com tablet" />
