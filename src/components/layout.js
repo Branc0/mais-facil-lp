@@ -14,6 +14,11 @@ import Footer from "./layout/footer"
 import styled from "styled-components"
 import Wpp from "./botao-wpp"
 
+
+const Main = styled.main`
+    background-color: #FAFAF4;
+    `
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -24,10 +29,6 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
-  const Main = styled.main`
-    background-color: #FAFAF4;
-    `
 
   return (
     <>
