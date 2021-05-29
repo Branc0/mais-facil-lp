@@ -13,6 +13,8 @@ const CustomFooter = styled.footer`
   padding: 30px 0;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 15;
   @media (max-width: 990px) {
       justify-content: center;
   }

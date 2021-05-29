@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./layout/header"
 import Footer from "./layout/footer"
 import styled from "styled-components"
+import Wpp from "./botao-wpp"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,13 +26,14 @@ const Layout = ({ children }) => {
   `)
 
   const Main = styled.main`
-    background-color: #FAFAF4
+    background-color: #FAFAF4;
     `
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Main id="inicio">{children}</Main>
+      <Wpp />
       <Footer />
     </>
   )
