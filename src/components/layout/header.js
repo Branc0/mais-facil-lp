@@ -61,7 +61,7 @@ class Header extends Component {
           <Navbar variant='dark' expand="lg">
             <Navbar.Brand className='mr-auto'>
               <CustomH1>
-                <LogoSvg />
+                <LogoSvg width="109px" height="54.3px" />
               </CustomH1>
             </Navbar.Brand>
             <Navbar.Toggle id="navbar-toggle" aria-controls="navbar-collapse" />
