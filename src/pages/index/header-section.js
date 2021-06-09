@@ -18,7 +18,7 @@ const Section = styled.section`
         min-height: 0;
         border-radius: 0;
     }
-    @media (max-width: 425px) {
+    @media (max-width: 525px) {
         padding-bottom: 0rem;
     }
 `
@@ -35,7 +35,7 @@ const CustomH2 = styled.h2`
         font-size: 32px;
         line-height: 32px;
     }
-    @media (max-width: 425px) {
+    @media (max-width: 525px) {
         margin-bottom: 18px;
     }
 `
@@ -50,7 +50,7 @@ const CustomP = styled.p`
         font-size: 16px;
         font-weight: 400;
     }
-    @media (max-width: 425px) {
+    @media (max-width: 525px) {
         font-weight: 300;
     }
 `
@@ -69,7 +69,7 @@ const ImgContainer = styled.div`
         width: 320px;
         right: -120px;
     }
-    @media (max-width: 425px) {
+    @media (max-width: 525px) {
         width: 280px;
         right: 0;
         margin: 0 auto;

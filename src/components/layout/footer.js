@@ -65,10 +65,10 @@ const Footer = () => (
         </Col>
         <Col xs='12' lg='4'>
           <div className="justify-content-center justify-content-lg-end d-flex">
-            <CustomA href="https://facebook.com" target="_blank" rel="noreferrer noopener">
+            <CustomA href="https://www.facebook.com/Mais-F%C3%A1cil-Contabilidade-Online-104579938524471" target="_blank" rel="noreferrer noopener">
               <FacebookSvg />
             </CustomA>
-            <CustomA href="https://instagram.com" target="_blank" rel="noreferrer noopener">
+            <CustomA href="https://www.instagram.com/maisfacilcontabilidade/" target="_blank" rel="noreferrer noopener">
               <InstagramSvg />
             </CustomA>
           </div>
