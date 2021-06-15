@@ -234,6 +234,7 @@ class Contact extends Component {
                                         <option disabled defaultValue>Escolha um plano</option>
                                         <option value="basico">Básico</option>
                                         <option value="premium">Premium</option>
+                                        <option value="consultar-especialista">Quero consulta de um especialista</option>
                                     </CustomSelect>
                                     <CustomInput
                                         id="ramo"
