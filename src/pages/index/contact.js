@@ -212,7 +212,7 @@ class Contact extends Component {
                                 <CustomP>Entre em contato para saber mais sobre como nosso sistema funciona, estamos prontos para falar com você a qualquer momento.</CustomP>
                                 <CustomP>Entrando em contato, você vai:</CustomP>
                                 <CustomLi>
-                                    <ul>Conhecer todas as vantages de contratar nossos serviços.</ul>
+                                    <ul>Conhecer todas as vantagens de contratar nossos serviços.</ul>
                                     <ul>Entender tudo que precisa ser feito em relação as necessidades contábeis da sua empresa.</ul>
                                     <ul>Saber o quanto você vai economizar fazendo sua contabilidade conosco.</ul>
                                 </CustomLi>

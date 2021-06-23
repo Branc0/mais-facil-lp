@@ -71,7 +71,7 @@ class Header extends Component {
                 <Nav.Link onClick={() => this.handleClick("#como-funciona")}>Como Funciona</Nav.Link>
                 <Nav.Link onClick={() => this.handleClick("#planos")}>Planos</Nav.Link>
                 <Nav.Link onClick={() => this.handleClick("#contato")}>Contato</Nav.Link>
-                <CustomA href="https://maisfacilcontabil.com.br/">Entrar</CustomA>
+                <CustomA href="https://app.maisfacilcontabil.com.br/">Entrar</CustomA>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
