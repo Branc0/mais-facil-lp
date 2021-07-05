@@ -23,19 +23,19 @@ const Botao = styled.a`
 `
 
 const Wpp = () => {
-    return (
-        <Botao
-            href="https://api.whatsapp.com/send?phone=5517991663337"
-            target="_blank"
-            rel="noopener noreferrer">
-            <WppSvg
-                id={WppSvg.id}
-                desc={`Logo marca`}
-                width="1.5rem"
-                height="1.5rem"
-            />
-        </Botao>
-    )
+	return (
+		<Botao
+			href="https://api.whatsapp.com/send?phone=5517981571626"
+			target="_blank"
+			rel="noopener noreferrer">
+			<WppSvg
+				id={WppSvg.id}
+				desc={`Logo marca`}
+				width="1.5rem"
+				height="1.5rem"
+			/>
+		</Botao>
+	)
 }
 
 export default Wpp

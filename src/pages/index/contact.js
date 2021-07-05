@@ -192,9 +192,7 @@ class Contact extends Component {
             .catch(data => {
                 console.log(data)
                 window.location = encodeURI(
-                    `https://api.whatsapp.com/send?phone=5517991663337&text=Olá, me chamo ${this.state.name} <${this.state.email}>. 
-                            Tenho uma empresa no ramo ${this.state.ramo} e tenho interesse no plano ${this.state.plano}.
-                            Sou de ${this.state.city}, ${this.state.state}. Para entrar em contato comigo ${this.state.phone}.`
+                    `https://api.whatsapp.com/send?phone=5517981571626&text=Olá,%20me%20chamo%20${this.state.name}%20<${this.state.email}>.%20Tenho%20uma%20empresa%20no%20ramo%20${this.state.ramo}%20e%20tenho%20interesse%20no%20plano%20${this.state.plano}.%20Sou%20de%20${this.state.city},%20${this.state.state}.%20Para%20entrar%20em%20contato%20comigo%20${this.state.phone}.`
                 )
             })
             .finally(() => this.setState({ ...this.initialFormState }))
