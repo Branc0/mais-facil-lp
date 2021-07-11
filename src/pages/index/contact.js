@@ -160,7 +160,7 @@ class Contact extends Component {
         event.preventDefault()
 
         this.setState({ loadingSubmit: true })
-
+        window.gtag("conversion", "click", { send_to: ["AW-342139969/URJECNz1m84CEMHIkqMB"] })
         fetch(
             "https://api.maisfacilcontabil.com.br/contact",
             {
@@ -188,6 +188,7 @@ class Contact extends Component {
                             "Recebemos sua mensagem. Entraremos em contato em breve.",
                     },
                 })
+                window.location.href = "./register-success"
             })
             .catch(data => {
                 console.log(data)

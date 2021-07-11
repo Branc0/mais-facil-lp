@@ -5,6 +5,27 @@ module.exports = {
     author: `Rafael Rocha de Azevedo`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "AW-342139969", // Google Ads / Adwords / AW
+        ],
+        // This object is used for configuration specific to this plugin
+        // pluginConfig: {
+        //   // Puts tracking script in the head instead of the body
+        //   head: false,
+        // },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "873216436605513",
+      },
+    },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
